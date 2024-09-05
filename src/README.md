@@ -2,6 +2,7 @@
 home: true
 layout: BlogHome
 portfolio: true
+heroFullScreen: true
 bgImage: https://gitee.com/stu-peter_0/picgopic/raw/main/pictures/202409041803505.jpg
 # projects:
 # - icon: project
