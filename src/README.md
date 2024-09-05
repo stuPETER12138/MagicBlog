@@ -9,6 +9,6 @@ bgImage: https://gitee.com/stu-peter_0/picgopic/raw/main/pictures/20240904180350
 # name: 项目名称
 # desc: 项目详细描述
 # link: https://你的项目链接
-footer: ''
+footer: ""
 copyright: MIT 协议 | 版权所有 © 2024 魔法窝瓜
 ---

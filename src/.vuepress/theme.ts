@@ -8,13 +8,13 @@ export default hopeTheme({
     name: "魔法窝瓜",
     url: "https://stupeter12138.github.io",
   },
-  darkmode: 'toggle',
-  logo: '/images/magicsquash.jpg',
-  repo: 'stuPETER12138/stuPETER12138.github.io',
-  repoLabel: 'GitHub',
+  darkmode: "toggle",
+  logo: "/images/magicsquash.jpg",
+  repo: "stuPETER12138/stuPETER12138.github.io",
+  repoLabel: "GitHub",
   repoDisplay: true,
   displayFooter: true,
-  copyright: 'MIT 协议 | 版权所有 © 2024 魔法窝瓜',
+  copyright: "MIT 协议 | 版权所有 © 2024 魔法窝瓜",
   // 导航栏
   navbar,
   // 侧边栏
@@ -24,9 +24,9 @@ export default hopeTheme({
     avatar: "/images/magicsquash.jpg",
     name: "👋你好，我是魔法窝瓜",
     description: "一只淡淡的窝瓜",
-    sidebarDisplay: 'none',
-    articlePerPage: '6',
-    timeline: '昨天也是努力的一天吗',
+    sidebarDisplay: "none",
+    articlePerPage: "6",
+    timeline: "昨天也要好好学习",
     medias: {
       GitHub: "https://github.com/stuPETER12138",
     },
@@ -42,8 +42,8 @@ export default hopeTheme({
     },
     components: {
       components: [
-        'PDF',
-        'Share',
+        "PDF",
+        "Share",
 
       ],
     },

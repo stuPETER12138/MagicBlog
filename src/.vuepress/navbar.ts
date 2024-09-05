@@ -21,8 +21,8 @@ export default navbar([
         ],
       },
       {
-        text: '一点点 VIM',
-        prefix: 'vim/',
+        text: "一点点 VIM",
+        prefix: "vim/",
         children: [
           {text: "VIM 基础教程", link: "Tutor"},
         ],
@@ -30,37 +30,37 @@ export default navbar([
     ],
   },
   {
-    text: '我思',
-    icon: '/icons/line-md--speedometer-loop.svg',
-    prefix: '/thinking/',
+    text: "我思",
+    icon: "/icons/line-md--speedometer-loop.svg",
+    prefix: "/thinking/",
     children: [
       {
-        text: '论文精读',
-        prefix: 'papereading/',
+        text: "论文精读",
+        prefix: "papereading/",
         children: [
           {text: "DeepSpeed-MoE 阅读笔记", link: "DS-MoE"},
         ],
       },
       {
-        text: '我的大学',
-        prefix: 'college/',
+        text: "我的大学",
+        prefix: "college/",
         children: [],
       },
     ],
   },
   {
-    text: '我做',
-    icon: '/icons/line-md--cog-loop.svg',
-    prefix: '/doing/',
+    text: "我做",
+    icon: "/icons/line-md--cog-loop.svg",
+    prefix: "/doing/",
     children: [
       {
-        text: '晋馔雅韵',
-        prefix: 'jin/',
+        text: "晋馔雅韵",
+        prefix: "jin/",
         children: [],
       },
       {
-        text: 'Datawhale AI 夏令营',
-        prefix: 'DatawhaleAI/',
+        text: "Datawhale AI 夏令营",
+        prefix: "DatawhaleAI/",
         children: [
           {text: "task0201", link: "task0201"},
           {text: "task0202", link: "task0202"},
