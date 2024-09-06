@@ -10,4 +10,3 @@ article: false
 - [Task 2](task0202)
 - [Task 3](task0203)
 
-![](https://gitee.com/stu-peter_0/picgopic/raw/main/pictures/202407201733716.jpg)

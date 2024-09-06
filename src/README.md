@@ -3,7 +3,7 @@ home: true
 layout: BlogHome
 portfolio: true
 heroFullScreen: true
-bgImage: https://gitee.com/stu-peter_0/picgopic/raw/main/pictures/202409041803505.jpg
+bgImage: "/images/7F9C8A9B60E1928F1E0F5950460BF2FD.jpg"
 # projects:
 # - icon: project
 # name: 项目名称
