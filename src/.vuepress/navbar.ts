@@ -58,15 +58,6 @@ export default navbar([
         prefix: "jin/",
         children: [],
       },
-      {
-        text: "Datawhale AI 夏令营",
-        prefix: "DatawhaleAI/",
-        children: [
-          {text: "task0201", link: "task0201"},
-          {text: "task0202", link: "task0202"},
-          {text: "task0203", link: "task0203"},
-        ],
-      },
     ],
   },
 ]);
