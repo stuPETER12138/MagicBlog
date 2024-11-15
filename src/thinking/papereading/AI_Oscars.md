@@ -94,7 +94,7 @@ Agent actions are the culmination of prior planning, memory utilization, and int
 
 - Role-Playing Attractiveness
 
-    Delta PPL emphasizes the use of relative automatic metrics, to gauge the model's role-playing capability using triplets like $ (x, y_{win}, y_{lose})$.
+    Delta PPL emphasizes the use of relative automatic metrics, to gauge the model's role-playing capability using triplets like $(x, y_{win}, y_{lose})$.
 
     This is the most advanced level, where the role-playing models not only maintain persona and behavioral consistency but also enhances the interaction by being engaging, proactive, and empathetic.
 
