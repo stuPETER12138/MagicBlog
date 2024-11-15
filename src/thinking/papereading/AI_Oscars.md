@@ -1,4 +1,12 @@
-# The Oscars Of AI Theater
+---
+date: 2024-11-15
+title: The Oscars of AI Theater 阅读笔记
+category:
+    - 我思
+tag:
+    - Role-Playing
+    - AI
+---
 
 This practice of aligning LLMs with specific personas or characters is commonly konwn as Role-Playing, aiming to fulfill human needs at a psychological and entertainment level. 
 
