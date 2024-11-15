@@ -25,7 +25,7 @@ export default hopeTheme({
     name: "👋你好，我是魔法窝瓜",
     description: "一只淡淡的窝瓜",
     sidebarDisplay: "none",
-    articlePerPage: "6",
+    articlePerPage: 6,
     timeline: "昨天也要好好学习",
     medias: {
       GitHub: "https://github.com/stuPETER12138",
@@ -49,9 +49,6 @@ export default hopeTheme({
     },
     // 此处开启了很多功能用于演示，你应仅保留用到的功能。
     mdEnhance: {
-      git: {
-        CreatedTime: false,
-      },
       include: true,
       footnote: true,
       tabs: true,
