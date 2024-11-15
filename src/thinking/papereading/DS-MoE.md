@@ -57,15 +57,15 @@ tag:
 
 1. 训练与评估
 
-![](static/Al0xbohLnoZIIaxZL83cfWbLnjd.png)
+![](images/Al0xbohLnoZIIaxZL83cfWbLnjd.png)
 
 1. MoE 可提升 NLG 模型的质量
 
-![](static/MwETb4K7VoQQZYxuKuScbd8onPZ.png)
+![](images/MwETb4K7VoQQZYxuKuScbd8onPZ.png)
 
 图 1 显示，模型的 MoE 版本的验证损失明显优于其密集对应版本。此外，请注意，MoE 模型 350M+MoE-128 的验证损失与 1.3B 密集模型（基础模型大 4 倍）的验证损失相当。这也适用于与 6.7B 稠密模型相比，其基础模型大 5 倍的 1.3B+MoE-128。
 
-![](static/LymYbrlv2orkC9xVhITcFd5wnpf.png)
+![](images/LymYbrlv2orkC9xVhITcFd5wnpf.png)
 
 此外，模型质量不仅在验证损失方面，而且在表 2 所示的 6 个下游任务（1 个完形填空预测任务 (LAMBADA ), 1 个常识推理任务 (PIQA ), 2 个阅读理解任务 (BoolQ ）, RACEh), 以及 2 个问答任务 (TriviaQA , WebQs)）的零样本评估方面也相当，这表明 MoE 模型及其基础模型大 4-5 倍的稠密对应模型具有非常相似的模型质量。
 
@@ -77,7 +77,7 @@ tag:
 
 此外，实验结果表明，通过应用 MoE，作者可以在 1.3B 参数稠密模型的训练成本下实现 6.7B 参数稠密模型的模型质量，从而有效地将训练计算量减少 5 倍。
 
-![](static/MHX9bCHpAoHn89xzhm1cK2eLndB.png)
+![](images/MHX9bCHpAoHn89xzhm1cK2eLndB.png)
 
 ### PR-MoE 和 MoS：减小模型尺寸并提高参数效率
 
@@ -89,7 +89,7 @@ tag:
 
 为了研究这个问题，作者比较了两种基于 350M+MoE 模型的不同 Half-MoE 架构的性能。更具体地说，<u>a)</u> 作者将 MoE 层放在模型的前半部分层，并将后半部分层保持与密集模型相同（称为 First-Half-MoE），<u> b)</u> 作者将 MoE 层切换到后半部分，并在前半部分使用密集层（称为 Second-Half-MoE）。结果如图 2（左）所示。可以看出，Second-Half-MoE 的性能明显优于其对应模型。这证实了并非所有 MoE 层都学习到相同水平的表示。更深层的层从大量专家中获益更多。为简便起见，作者将此现象称为现象一。
 
-![](static/OyRPbIA66oyUrvxJ5E0cPBc6nDh.png)
+![](images/OyRPbIA66oyUrvxJ5E0cPBc6nDh.png)
 
 - 现象二
 
@@ -99,7 +99,7 @@ tag:
 
 - PR-MoE
 
-![](static/C1p3bZtZ5obrUfxBq6JcU5ZBnRg.png)
+![](images/C1p3bZtZ5obrUfxBq6JcU5ZBnRg.png)
 
 正如现象 I 所示，在较后层使用 MoE 会带来更多益处，因此作者的新架构在最后几层使用了比之前层更多的专家。这形成了金字塔式 MoE 设计，如图 3（右）中展示了一个例子——最后两层拥有比前两层多两倍的专家。同时，考虑到现象 II，作者提出了残差 MoE 架构，其中每个 token 分别通过一个固定的 MLP 模块和一个选定的专家，如图 3（右）所示，橙色块代表固定的 MLP。
 
@@ -111,11 +111,11 @@ tag:
 
 - 评估
 
-![](static/WnXub6DPIoGdqPxWu8pcA0eKnHe.png)
+![](images/WnXub6DPIoGdqPxWu8pcA0eKnHe.png)
 
 对于 350M 和 1.3B 两种情况，PR-MoE 模型使用更少的参数，但达到了与标准 MoE 模型相当的精度。
 
-![](static/XddFbQYU7o7dGwxIc3acnX5Vn4K.png)
+![](images/XddFbQYU7o7dGwxIc3acnX5Vn4K.png)
 
 使用 PR-MoE 时，损失差距可以进一步减小到约 0.01，这表明 PRMoE 在最小质量影响的情况下具有极高的参数效率。
 
@@ -123,7 +123,7 @@ tag:
 
 作者的研究表明，对于使用知识蒸馏预训练的更小的 MoE 模型，可以实现类似的性能，例如在许多下游任务上的零样本评估，从而在推理时间内得到更轻量级、更快的模型。
 
-![](static/FJVTbdE80oEmrIxFrkCczBYcnsb.png)
+![](images/FJVTbdE80oEmrIxFrkCczBYcnsb.png)
 
 1. 分阶段知识蒸馏的混合学生模型
 
@@ -135,11 +135,11 @@ tag:
 
 作者发现这种分阶段的 KD 版本现在为作者带来了知识蒸馏的预期益处：学生模型现在具有与教师模型相似的验证曲线。下游任务的评估结果也表明，分阶段知识蒸馏在零样本评估精度方面比对整个训练过程应用知识蒸馏要好得多
 
-![](static/WDvFbNu1TotCBax1djschEVjn5d.png)
+![](images/WDvFbNu1TotCBax1djschEVjn5d.png)
 
 接下来，作者在一些 NLP 任务上进行零样本评估。总体而言，通过分阶段 KD 蒸馏的 MoE 模型平均准确率分别为 42.87 和 47.96，尽管层数减少了 12.5%，但仍保留了 350M (43.08) 和 1.3B 教师模型 (48.37) 的 99.5% 和 99.1% 的性能。
 
-![](static/RG8ObF5qeoN7RWxRc8Fcf4HFncf.png)
+![](images/RG8ObF5qeoN7RWxRc8Fcf4HFncf.png)
 
 ### DeepSpeed-MoE 推理：以空前的规模和速度服务于 MoE 模型
 
@@ -164,7 +164,7 @@ DeepSpeed-MoE 推理系统的设计目标是将性能引导至最佳情况。这
 
 作者通过以下方法最小化每个设备的关键数据路径，最大化可实现的总内存带宽，并同时提供充足的总内存，以支持大规模模型： (1) 使用专家并行和专家参数切片，以及 (2) 使用数据并行和张量切片处理非专家参数。图 7 展示了一个单一的 MoE Transformer 层，它包含专家（例如，MLP）和非专家参数（例如，注意力），以及作者如何使用并行策略组合来处理每个组件。
 
-![](static/PWkPbBHqvoBEhkxAhsDcX7cynHc.png)
+![](images/PWkPbBHqvoBEhkxAhsDcX7cynHc.png)
 
 虽然每个 token 在每个 MoE 层仅激活一个专家，但对于具有多个 token 的批次推理，所有 token 所需的聚合参数可能与整个参数集一样大，这使得同时实现低延迟和高吞吐量具有挑战性。为了解决这个问题，<u>作者将专家分配到不同的设备上，将分配给同一专家的所有输入 token 分组到同一个关键数据路径下，并使用专家并行化在不同的设备上并行处理具有不同关键数据路径的 token 组。</u>
 
@@ -182,7 +182,7 @@ DeepSpeed-MoE 推理系统的设计目标是将性能引导至最佳情况。这
 
 - 分层全对全：基于树的层次化算法通常与全约简、广播等通信集体一起使用，以减少通信跳数。作者实现了一个分层全对全，它是一个两步过程，<u>包括数据布局转换、节点内全对全、第二次数据布局转换和最终的节点间全对全。</u>这将通信跳数从 O(p) 减少到 O(G + p/G)，其中 G 是每个节点中的 GPU 数量，p 是 GPU 设备的总数尽管通信量增加了 2 倍，但这种分层实现允许在小批量大小的情况下更好地扩展，因为这种消息大小的通信更受延迟限制而不是带宽限制。
 
-![](static/P3DybrX7uobLUJxWTrxcjSuwnXJ.png)
+![](images/P3DybrX7uobLUJxWTrxcjSuwnXJ.png)
 
 张量切片将单个算子拆分到多个 GPU 上，<u>需要它们之间进行全约简</u>，而专家并行将专家算子放置在多个 GPU 上，而不会拆分它们，<u>需要它们之间进行全对全通信</u>。处理这些通信的一种朴素方法是将每个并行视为一个黑盒，独立地执行所需的通信。然而，这会导致性能不佳。
 
@@ -190,7 +190,7 @@ DeepSpeed-MoE 推理系统的设计目标是将性能引导至最佳情况。这
 
 类似地，在执行专家并行算子后跟张量切片算子时，最终的全对全操作可以以相同的方式完成，但这次之后是在张量并行秩之间进行一次全聚合操作，以复制张量切片所需的数据（图 9）。这将延迟开销从 O(p) 降低到 O(p/L) + O(L)。
 
-![](static/HJJEbf53Woi3zgx3Axtc5G5xnOb.png)
+![](images/HJJEbf53Woi3zgx3Axtc5G5xnOb.png)
 
 这种降低的延迟开销允许更好地扩展到大量设备。例如，当扩展到 128 个 GPU，使用 8 路张量切片和 128 路专家并行时，这种方法将全对全的延迟开销从 (128C1 + C2) 降低到 (16C1 + C2)，这是由于 8 路张量切片，其中 C1 和 C2 是由点对点延迟、消息大小和带宽决定的常数。
 
@@ -212,19 +212,19 @@ DeepSpeed-MoE 推理系统的设计目标是将性能引导至最佳情况。这
 
 1. DS-MoE 推理性能评估
 
-![](static/RgkfbTj3woEVvbxIdOdchMiBnJh.png)
+![](images/RgkfbTj3woEVvbxIdOdchMiBnJh.png)
 
 - 同时实现低延迟和超线性吞吐量提升
 
 对于密集模型，可以通过使用多个 GPU 和数据并行（没有 GPU 间通信的独立副本）来提高吞吐量，而通过诸如张量切片之类的技术将模型划分为多个 GPU 可以实现更低的延迟。为了降低延迟，张量切片式模型并行已被证明是有益的，但它也带来了代价——GPU 之间的通信开销——这通常会降低每个 GPU 的吞吐量，并导致总吞吐量的亚线性扩展。换句话说，对于密集模型，作者无法同时利用并行性来优化延迟和吞吐量；它们之间存在权衡。然而，MoE 推理提供了独特的机会，可以同时提供优化的延迟和吞吐量，同时扩展到大量设备。
 
-![](static/BUcdbSQKGowbijxQLXNcqKPFnjd.png)
+![](images/BUcdbSQKGowbijxQLXNcqKPFnjd.png)
 
 如前所述，密集模型的最佳情况吞吐量扩展与 GPU 数量呈线性关系。然而，作者在图 10 中的结果表明，当作者将 GPU 数量从 8 个增加到 64 个时，DeepSpeed 获得了更高的每个 GPU 吞吐量，因此总吞吐量呈超线性增长。这与密集模型形成鲜明对比，并展示了 MoE 模型相对于密集模型的重大优势。
 
 - 前所未有的规模下的低延迟和高吞吐量
 
-![](static/UeBZbpPQsoWgc0xYaMCcqpCNnDf.png)
+![](images/UeBZbpPQsoWgc0xYaMCcqpCNnDf.png)
 
 - PR-MoE 和 MoS 的增强优势
 
@@ -232,11 +232,11 @@ DeepSpeed-MoE 推理系统的设计目标是将性能引导至最佳情况。这
 
 （1）减少执行这些模型推理所需的最小 GPU 数量，如图 12 所示。
 
-![](static/PaiSbalq4oI5ydxdPwQcTnRrnnc.png)
+![](images/PaiSbalq4oI5ydxdPwQcTnRrnnc.png)
 
 （2）进一步提高各种规模的 MoE 模型的延迟和吞吐量，如图 13 所示。
 
-![](static/Ub1TbI1a9ohbT7xFc6Oc5UXrnQe.png)
+![](images/Ub1TbI1a9ohbT7xFc6Oc5UXrnQe.png)
 
 - 比质量相当的稠密模型具有更好的延迟和吞吐量
 
@@ -244,9 +244,9 @@ DeepSpeed-MoE 推理系统的设计目标是将性能引导至最佳情况。这
 
 作者观察到，随着模型规模的增加，MoE 模型相对于稠密模型的优势变得更大。
 
-![](static/XCNfbjGuGoWMtzxc8oucGGnjntb.png)
+![](images/XCNfbjGuGoWMtzxc8oucGGnjntb.png)
 
-![](static/OVnebXZVAoL5ofxu8RNcrdIRnWc.png)
+![](images/OVnebXZVAoL5ofxu8RNcrdIRnWc.png)
 
 总的来说，DeepSpeed-MoE 与使用 PyTorch 提供质量相当的密集模型相比，最多可将 MoE 模型推理速度提高 4.5 倍，成本降低 9 倍。正如这些结果所示，随着模型规模和硬件资源的扩展，其带来的益处也随之增加，这让作者相信 MoE 模型将成为推动下一代 AI 规模发展的重要力量。
 
