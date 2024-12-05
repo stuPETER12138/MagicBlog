@@ -39,7 +39,8 @@ export default navbar([
         prefix: "papereading/",
         children: [
           {text: "DeepSpeed-MoE 阅读笔记", link: "DS-MoE"},
-          {text: "The Oscars Of AI Theater 阅读笔记", link: "AI_Oscars"}
+          {text: "The Oscars Of AI Theater 阅读笔记", link: "AI_Oscars"},
+          {text: "Marco-o1 阅读笔记", link: "Marco1"},
         ],
       },
       {
