@@ -1,6 +1,6 @@
 ---
 date: 2024-12-05
-title: Marco-o1: 让开源推理模型解决开放式问题
+title: Marco-o1 让开源推理模型解决开放式问题
 category:
     - 我思
 tag:
