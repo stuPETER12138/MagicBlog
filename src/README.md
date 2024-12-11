@@ -3,7 +3,7 @@ home: true
 layout: BlogHome
 portfolio: true
 heroFullScreen: false
-bgImage: "/images/7F9C8A9B60E1928F1E0F5950460BF2FD.jpg"
+bgImage: "/images/flower.JPG"
 # projects:
 # - icon: project
 # name: 项目名称
