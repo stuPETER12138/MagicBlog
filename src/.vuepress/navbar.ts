@@ -46,7 +46,9 @@ export default navbar([
       {
         text: "我的大学",
         prefix: "college/",
-        children: [],
+        children: [
+          {text: "模仿学习小调查", link: "IL_survey"},
+        ],
       },
     ],
   },
