@@ -1,4 +1,4 @@
-<h1 align="center">魔法窝瓜(My Magic Blog)</h1>
+<h1 align="center">魔法窝瓜(My Magical Blog)</h1>
 
 <div align="center">
   <img alt="Who I am" src="https://img.shields.io/badge/%E4%BD%9C%E8%80%85-Magic_Squash-F7DC6F">
