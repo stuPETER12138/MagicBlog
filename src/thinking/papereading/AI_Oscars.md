@@ -1,8 +1,6 @@
 ---
 date: 2024-11-15
 title: The Oscars of AI Theater 阅读笔记
-category:
-    - 我思
 tag:
     - Role-Playing
     - AI

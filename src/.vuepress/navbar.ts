@@ -7,7 +7,7 @@ export default navbar([
     link: "/",
   },
   {
-    text: "我学",
+    text: "来一起学习吧",
     icon: "/icons/line-md--coffee-loop.svg",
     prefix: "/studying/",
     children: [
@@ -30,7 +30,7 @@ export default navbar([
     ],
   },
   {
-    text: "我思",
+    text: "感受头脑风暴吗",
     icon: "/icons/line-md--speedometer-loop.svg",
     prefix: "/thinking/",
     children: [
@@ -53,7 +53,7 @@ export default navbar([
     ],
   },
   {
-    text: "我做",
+    text: "看看好玩儿的",
     icon: "/icons/line-md--cog-loop.svg",
     prefix: "/doing/",
     children: [
@@ -61,6 +61,13 @@ export default navbar([
         text: "晋馔雅韵",
         prefix: "jin/",
         children: [],
+      },
+      {
+        text: "好玩的人工智能",
+        prefix: "ai/",
+        children: [
+          {text: "Hello, Agent", link: "agent"}
+        ],
       },
     ],
   },

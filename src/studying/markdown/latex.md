@@ -1,8 +1,6 @@
 ---
 date: 2024-06-17
 title: latex 语法指北
-category: 
-    - 我学
 tag: 
     - latex
 ---

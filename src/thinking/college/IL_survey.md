@@ -1,8 +1,6 @@
 ---
-title: A Survey of Imitation Learning for Embodied Intelligence
 date: 2025-01-09
-category:
-    - 我思
+title: A Survey of Imitation Learning for Embodied Intelligence
 tag:
     - IL
     - survey

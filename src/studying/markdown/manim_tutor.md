@@ -2,8 +2,6 @@
 date: 2024-08-18
 title: Manim 语法指北
 article: false
-category:
-    - 我学
 tags:
     - manim
 ---

@@ -3,8 +3,6 @@ date: 2024-06-11
 title: markdown 语法指北
 star: 1
 sticky: false
-category: 
-    - 我学
 tag: 
     - markdown
 ---
