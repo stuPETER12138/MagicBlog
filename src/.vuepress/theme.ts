@@ -14,7 +14,7 @@ export default hopeTheme({
   repoLabel: "GitHub",
   repoDisplay: true,
   displayFooter: true,
-  copyright: "MIT 协议 | 版权所有 © 2024 魔法窝瓜",
+  copyright: "MIT 协议 | 版权所有 © 2024-现在 魔法窝瓜",
   // 导航栏
   navbar,
   // 侧边栏
