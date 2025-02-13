@@ -7,17 +7,17 @@ export default sidebar({
       link: "/"
     },
     {
-      text: "我学",
+      text: "来一起学习把",
       prefix: "studying/",
       children: "structure",
     },
     {
-      text: "我思",
+      text: "感受头脑风暴吗",
       prefix: "thinking/",
       children: "structure",
     },
     {
-      text: "我做",
+      text: "看看好玩儿的",
       prefix: "doing/",
       children: "structure",
     },

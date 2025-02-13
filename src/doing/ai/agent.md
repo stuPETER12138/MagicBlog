@@ -117,3 +117,7 @@ print("Assistant Message:", assistant_msg)
 > - [项目主页](https://www.camel-ai.org/) 
 
 在 CAMEL 中主要是多智能体的实现主要是通过角色扮演`Role-Playing`的方式，让智能体扮演特定的角色，并拥有相应角色的专业知识背景。这些智能体通过对话和合作来共同完成任务。
+
+## 参考资料
+
+[CAMEL Multi-Agent Tutorial](https://fmhw1n4zpn.feishu.cn/docx/AF4XdOZpIo6TOaxzDK8cxInNnCe)
