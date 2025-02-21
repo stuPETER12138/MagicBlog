@@ -4,7 +4,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "Magic Blog",
   description: "A VitePress Site",
-  srcDir: './ref',
+  srcDir: './src',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
