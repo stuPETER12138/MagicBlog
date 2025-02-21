@@ -1,22 +1,10 @@
 {
-  "name": "vuepress-theme-hope-stupeter12138",
-  "description": "A project of vuepress-theme-hope",
-  "version": "2.0.0",
-  "license": "MIT",
-  "type": "module",
-  "scripts": {
-    "docs:build": "vuepress-vite build src",
-    "docs:clean-dev": "vuepress-vite dev src --clean-cache",
-    "docs:dev": "vuepress-vite dev src",
-    "docs:update-package": "pnpm dlx vp-update"
-  },
   "devDependencies": {
-    "@vuepress/bundler-vite": "2.0.0-rc.14",
-    "katex": "^0.16.11",
-    "mathjax-full": "^3.2.2",
-    "vue": "^3.4.31",
-    "vuepress": "2.0.0-rc.14",
-    "vuepress-plugin-md-enhance": "2.0.0-rc.52",
-    "vuepress-theme-hope": "2.0.0-rc.52"
+    "vitepress": "^1.6.3"
+  },
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
   }
 }
